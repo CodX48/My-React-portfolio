@@ -5,7 +5,7 @@ import { useState,useEffect } from "react";
 function ReposList() {
 
     const [Repos,SetRepos] = useState([]);
-    //const [languages,SetLanguages] = useState({});
+    const [languages,SetLanguages] = useState({});
     const [error,SetError] = useState(null);
     
     useEffect(()=>{
@@ -25,7 +25,7 @@ function ReposList() {
         }
 
         
-        FetchData(API);
+        FetchData(API)
     },[])
 
 
@@ -46,7 +46,7 @@ function ReposList() {
               >
               <div className="w-[100%] h-full  flex justify-between items-center gap-5">
                 <a
-                  className=" text-1xl font-semibold text-zinc-50 hover:text-pink-500 transition-all duration-300" 
+                  className=" text-1xl font-semibold text-zinc-50 hover:text-violet-600 transition-all duration-300" 
                   href={Repos.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -54,8 +54,8 @@ function ReposList() {
                   {(Repos.name).toUpperCase()}
                 </a>
                 <div>
-                <p className="w-80">{Repos.description}</p>
-                <span>{Repos.language}</span>
+                <p className="w-80 mb-1">{Repos.description}</p>
+                <span className="bg-violet-400/5 ring-1 ring-violet-600/80 py-1 px-2 rounded-md text-pink-100 text-[13px]">{Repos.language}</span>
                 </div>
                 </div>
             </li>
