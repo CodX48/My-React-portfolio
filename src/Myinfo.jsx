@@ -22,16 +22,16 @@ const IStyle = {
 function Information_experians(){
     return(
         
-        <div className="flex mt-10 items-center w-[97%]">
-        <div className=" text-zinc-100 ">
+        <div className="lg:flex mt-10 items-center w-[97%] max-md:block max-md:justify-center md:items-center">
+        <div className=" text-zinc-100 w-full">
             <h1 className="text-4xl font-semibold mb-5">{'moustafa khamis'.toUpperCase()}</h1>
-            <p className="w-[50%] font-semibold text-1xl">I am a front-end developer with experience in HTML, CSS, JavaScript, and React. I specialize in creating responsive user interfaces and recently started working with Tailwind CSS to enhance my designs.</p>
+            <p className="lg:w-[70%] font-semibold text-1xl max-md:w-[100%]">I am a front-end developer with experience in HTML, CSS, JavaScript, and React. I specialize in creating responsive user interfaces and recently started working with Tailwind CSS to enhance my designs.</p>
             <div className="flex gap-5 mt-5 text-zinc-100  font-bold">
-            <p className="flex gap-1 items-center" ><FaLocationArrow className="text-1xl" /> <span>Egyption</span></p>
+            <p className="flex gap-2 items-center" ><FaLocationArrow className="text-1xl" /> <span>Egyption</span></p>
             </div>
             </div>
 
-        <div className="flex text-2xl gap-10 cursor-pointer">
+        <div className="flex lg:text-2xl gap-10 cursor-pointer max-lg:mt-5 md:text-1xl">
             <i style={IStyle.React} ><FaReact /></i>
             <i style={IStyle.Tailwind} className=""><RiTailwindCssFill /></i>
         </div>
