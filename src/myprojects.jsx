@@ -5,7 +5,6 @@ import { useState,useEffect } from "react";
 function ReposList() {
 
     const [Repos,SetRepos] = useState([]);
-    const [languages,SetLanguages] = useState({});
     const [error,SetError] = useState(null);
     
     useEffect(()=>{
@@ -30,7 +29,7 @@ function ReposList() {
 
 
     if(error){
-        return ( <div><p>Something Wrong happend!!</p></div>);
+        return ( <div className="w-full flex justify-center mt-20 text-5xl text-zinc-500"><p>Faild To Fetch Projects!!</p></div>);
     }
 
     const FilterdRepos = Repos.filter(R => R.description && R.description.includes(" front-end "));
@@ -38,7 +37,7 @@ function ReposList() {
     return(
         <div className="flex flex-col justify-center items-center mt-20 lg:w-full ">
         
-        <ul className="flex flex-col justify-center items-center gap-5 h-fit w-[100%] bg-zinc-950/50 lg:px-32 py-20 ring-1 ring-pink-500/20 shadow-lg rounded-md md:px-10 sm:px-10 max-sm:px-10 ">
+        <ul className="flex flex-col justify-between items-center gap-5 w-[90%] bg-zinc-950/50 lg:px-20 py-20 ring-1 ring-pink-500/20 shadow-lg rounded-md md:px-10 sm:px-10 max-sm:px-10 min-h-[400px]">
           {FilterdRepos.map((Repos) => (
             <li
               key={Repos.id}
@@ -53,8 +52,8 @@ function ReposList() {
                 >
                   {(Repos.name).toUpperCase()}
                 </a>
-                <div className="max-sm:mt-3">
-                <p className="w-80 mb-2 lg:block sm:max-w-[90%] max-sm:max-w-[90%] sm:text-lg">{Repos.description}</p>
+                <div className="max-sm:mt-3  p-1 w-[50%]">
+                <p className="w-full mb-2 lg:block sm:max-w-[60%] max-sm:max-w-[75%] sm:text-lg ">{Repos.description}</p>
                 <span className="bg-violet-400/5 ring-1 ring-violet-600/80 py-1 px-2 rounded-md text-pink-100 text-[13px]">{Repos.language}</span>
                 </div>
                 </div>
