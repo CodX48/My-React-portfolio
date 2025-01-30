@@ -1,24 +1,51 @@
 import { FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaLocationArrow } from "react-icons/fa";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3 } from "react-icons/fa";
+import { FaJs } from "react-icons/fa";
 
 const IStyle = {
+    Html: {
+        backgroundColor: '#30363d',
+        padding: '10px',
+        borderRadius: '10px',
+        color: '#E34F26',
+        border: 'solid 1px #d3d3d3',
+    },
+    Css: {
+        backgroundColor: '#30363d',
+        padding: '10px',
+        borderRadius: '10px',
+        color: '#1572B6',
+        border: 'solid 1px #d3d3d3',
+    },
+    Js: {
+        backgroundColor: '#30363d',
+        padding: '10px',
+        borderRadius: '10px',
+        color: '#F7DF1E',
+        border: 'solid 1px #d3d3d3',
+    },
     React: {
         backgroundColor: '#30363d',
         padding: '10px',
-        borderRadius: '100%',
+        borderRadius: '10px',
         color: '#61DAFB',
-        border: 'solid 2px #61DAFB',
+        border: 'solid 1px #d3d3d3',
     },
     Tailwind: {
         backgroundColor: '#30363d',
         padding: '10px',
-        borderRadius: '100%',
+        borderRadius: '10px',
         color: '#38BDF8',
-        border: 'solid 2px #38BDF8',
+        border: 'solid 1px #d3d3d3',
     },
 };
 
+function styleAnimation(time){
+    return({"--my-bounce":`bounce ${time}s infinite alternate`})
+  }
 function Information_experians(){
     return(
         
@@ -31,9 +58,14 @@ function Information_experians(){
             </div>
             </div>
 
-        <div className="flex lg:text-2xl gap-10 cursor-pointer max-lg:mt-5 md:text-1xl">
-            <i style={IStyle.React} ><FaReact /></i>
-            <i style={IStyle.Tailwind} className=""><RiTailwindCssFill /></i>
+        <div className="flex lg:text-2xl gap-7 cursor-pointer max-lg:mt-5 md:text-1xl">
+        <i className="animate-[--my-bounce]" style={{ ...IStyle.Html, ...styleAnimation(7) }}><FaHtml5/></i>
+        <i className="animate-[--my-bounce]" style={{ ...IStyle.Css, ...styleAnimation(4) }}><FaCss3/></i>
+        <i className="animate-[--my-bounce]" style={{ ...IStyle.Js, ...styleAnimation(10) }}><FaJs/></i>
+        <i className="animate-[--my-bounce]" style={{ ...IStyle.React, ...styleAnimation(7) }}><FaReact/></i>
+        <i className="animate-[--my-bounce]" style={{ ...IStyle.Tailwind, ...styleAnimation(9) }}><RiTailwindCssFill/></i>
+
+
         </div>
         </div>
         

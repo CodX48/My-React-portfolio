@@ -15,8 +15,9 @@ const MyexperienceList = [
   function MoreAboutMe(){
 
     return(
-        <div className="w-[100%] flex justify-center items-center">
-            <ul className="p-20 lg:w-[90%] min-md:w-full">
+        <div className="w-[100%] relative flex justify-center items-center overflow-hidden">
+          <div className="w-[300px] h-[300px] absolute left-52 bg-pink-950 rounded-full rotate-45 blur-3xl"></div>
+         <ul className="p-20 lg:w-[90%] min-md:w-full z-10">
             {MyexperienceList.map(ele=>{
                 return(
                     <li key={ele.id} className={`flex justify-center items-center lg:gap-40 mb-12 lg:flex-row ${ele.id % 2 == 0 ? 'lg:flex-row-reverse': ""} md:flex-col md:gap-5 sm:flex-col sm:gap-5 max-sm:flex-col max-sm:gap-5`}>
