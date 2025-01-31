@@ -2,7 +2,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareUpwork } from "react-icons/fa6";
 
-const [Linked,Upwork,Github] = ["","",""]
+const [Linked,Upwork,Github] = ["","https://www.upwork.com/freelancers/~01984c0a71ff9e2d88","https://github.com/CodX48"]
 
 function _Header(){
     return(

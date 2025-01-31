@@ -7,45 +7,37 @@ import { FaJs } from "react-icons/fa";
 
 const IStyle = {
     Html: {
-        backgroundColor: '#30363d',
         padding: '10px',
         borderRadius: '10px',
         color: '#E34F26',
-        border: 'solid 1px #d3d3d3',
+        border: 'solid 2px #30363d',
     },
     Css: {
-        backgroundColor: '#30363d',
         padding: '10px',
         borderRadius: '10px',
         color: '#1572B6',
-        border: 'solid 1px #d3d3d3',
+        border: 'solid 2px #30363d',
     },
     Js: {
-        backgroundColor: '#30363d',
         padding: '10px',
         borderRadius: '10px',
         color: '#F7DF1E',
-        border: 'solid 1px #d3d3d3',
+        border: 'solid 2px #30363d',
     },
     React: {
-        backgroundColor: '#30363d',
         padding: '10px',
         borderRadius: '10px',
         color: '#61DAFB',
-        border: 'solid 1px #d3d3d3',
+        border: 'solid 2px #30363d',
     },
     Tailwind: {
-        backgroundColor: '#30363d',
         padding: '10px',
         borderRadius: '10px',
         color: '#38BDF8',
-        border: 'solid 1px #d3d3d3',
+        border: 'solid 2px #30363d',
     },
 };
 
-function styleAnimation(time){
-    return({"--my-bounce":`bounce ${time}s infinite alternate`})
-  }
 function Information_experians(){
     return(
         
@@ -58,12 +50,12 @@ function Information_experians(){
             </div>
             </div>
 
-        <div className="flex lg:text-2xl gap-7 cursor-pointer max-lg:mt-5 md:text-1xl">
-        <i className="animate-[--my-bounce]" style={{ ...IStyle.Html, ...styleAnimation(7) }}><FaHtml5/></i>
-        <i className="animate-[--my-bounce]" style={{ ...IStyle.Css, ...styleAnimation(4) }}><FaCss3/></i>
-        <i className="animate-[--my-bounce]" style={{ ...IStyle.Js, ...styleAnimation(10) }}><FaJs/></i>
-        <i className="animate-[--my-bounce]" style={{ ...IStyle.React, ...styleAnimation(7) }}><FaReact/></i>
-        <i className="animate-[--my-bounce]" style={{ ...IStyle.Tailwind, ...styleAnimation(9) }}><RiTailwindCssFill/></i>
+        <div className="flex lg:text-2xl gap-5 cursor-pointer max-lg:mt-5 md:text-1xl">
+        <i className="animate-myBounce" style={{...{animationDuration: `${10}s`},...IStyle.Html}}><FaHtml5/></i>
+        <i className="animate-myBounce" style={{...{animationDuration: `${6}s`},...IStyle.Css}}><FaCss3/></i>
+        <i className="animate-myBounce" style={{...{animationDuration: `${13}s`},...IStyle.Js}}><FaJs/></i>
+        <i className="animate-myBounce" style={{...{animationDuration: `${9}s`},...IStyle.React}}><FaReact/></i>
+        <i className="animate-myBounce" style={{...{animationDuration: `${12}s`},...IStyle.Tailwind}}><RiTailwindCssFill/></i>
 
 
         </div>

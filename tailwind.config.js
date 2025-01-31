@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}", // Adjust based on your framework
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        myBounce: "bounce 5s infinite alternate",
+      },
+      
+    },
   },
   plugins: [],
 };
