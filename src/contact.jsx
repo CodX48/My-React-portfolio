@@ -20,8 +20,9 @@ function ContactInfo(){
     return(
         
         <div className="w-full flex justify-between items-center px-14 py-10 mt-20 lg:flex-row md:flex-col-reverse gap-10 sm:flex-col-reverse max-sm:flex-col-reverse sm:px-20">
-        <div className="z-20 p-5 gap-5 flex justify-between ">
-                
+            <div>
+            <h1 className="text-4xl mb-20 text-zinc-500">{'Constact us'.toUpperCase()}</h1>
+        <div className="z-20 gap-5 flex justify-between ">
             <div>
             <p className="text-sm font-bold mb-5 text-zinc-400 md:mb-2 sm:flex-col">contact</p>
             <p className="text-xs">{MyConstactInfo.contact.mail}</p>
@@ -41,6 +42,8 @@ function ContactInfo(){
             <p className="text-xs">{(MyConstactInfo._Location.L.toUpperCase())}</p>
             </div>
         </div>
+            </div>
+            
         <MailSide />
             </div>
         
