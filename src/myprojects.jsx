@@ -61,7 +61,10 @@ function ReposList() {
                 </a>
                 <div className="max-sm:mt-3  p-1 w-[50%]">
                 <p className="w-full mb-2 lg:block sm:max-w-[60%] max-sm:max-w-[75%] sm:text-lg ">{Repos.description}</p>
-                <span className="bg-violet-400/5 ring-1 ring-violet-600/80 py-1 px-2 rounded-md text-pink-100 text-[13px]">{Repos.language}</span>
+                {["HTML","CSS","JS"].map(ele =>{
+                  return(<span className="bg-violet-400/5 ring-1 ring-violet-600/80 py-1 px-2 rounded-md text-pink-100 text-[13px] mr-3">{ele}</span>
+                  )
+                })}
                 </div>
                 </div>
             </li>
