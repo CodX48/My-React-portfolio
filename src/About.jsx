@@ -16,13 +16,13 @@ const MyexperienceList = [
 
     return(
         <div className="w-[100%] relative flex justify-center items-center overflow-hidden">
-          <div className="w-[300px] h-[300px] absolute left-52 bg-pink-950 rounded-full rotate-45 blur-3xl"></div>
+          <div className="w-[300px] h-[300px] absolute left-52 bg-pink-900/50 rounded-full rotate-45 blur-3xl dark:bg-pink-900/50"></div>
          <ul className="p-20 lg:w-[90%] min-md:w-full z-10">
             {MyexperienceList.map(ele=>{
                 return(
                     <li key={ele.id} className={`flex justify-center items-center lg:gap-40 mb-12 lg:flex-row ${ele.id % 2 == 0 ? 'lg:flex-row-reverse': ""} md:flex-col md:gap-5 sm:flex-col sm:gap-5 max-sm:flex-col max-sm:gap-5`}>
-                        <p className="w-40 text-2xl font-bold">{ele.title}</p>
-                        <p className="text-md text-zinc-200 font-semibold">{ele.para}</p>
+                        <p className="w-40 text-2xl font-bold text-zinc-800 dark:text-zinc-200">{ele.title}</p>
+                        <p className="text-md text-zinc-800 font-semibold dark:text-zinc-200">{ele.para}</p>
                     </li>
                 )
             })}

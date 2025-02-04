@@ -2,7 +2,7 @@ import { useState } from "react";
 import emailjs from "emailjs-com"; 
 
 const shadowStyle = {
-    boxShadow: "0px 0px 90px #0c4a6e"
+    boxShadow: "0px 0px 90px #831843"
 };
 
 function MailSide() {
@@ -46,7 +46,7 @@ function MailSide() {
             <div className="flex flex-col h-full w-[100%]">
                 <div className="flex justify-between items-center w-[100%] mb-5 gap-5">
                     <input
-                        className="outline-none p-2 rounded-md w-full"
+                        className={`outline-none p-2 rounded-md w-full focus:ring-1 ring-black`}
                         type="text"
                         name="firstName"
                         id="firstName"
@@ -56,7 +56,7 @@ function MailSide() {
                         onChange={handelMailInfo}
                     />
                     <input
-                        className="outline-none p-2 rounded-md w-full"
+                        className="outline-none p-2 rounded-md w-full focus:ring-1 ring-black"
                         type="text"
                         name="lastName"
                         id="lastName"
@@ -67,7 +67,7 @@ function MailSide() {
                     />
                 </div>
                 <input
-                    className="outline-none p-2 mb-5 rounded-md"
+                    className="outline-none p-2 mb-5 rounded-md focus:ring-1 ring-black"
                     type="email"
                     name="email"
                     id="email"

@@ -25,21 +25,21 @@ function ContactInfo(){
         <div className="z-20 gap-5 flex justify-between ">
             <div>
             <p className="text-sm font-bold mb-5 text-zinc-400 md:mb-2 sm:flex-col">contact</p>
-            <p className="text-xs">{MyConstactInfo.contact.mail}</p>
-            <p className="text-xs mt-1">{MyConstactInfo.contact.phoneNum}</p>
+            <p className="text-xs  dark:text-zinc-200 text-zinc-800 font-bold">{MyConstactInfo.contact.mail}</p>
+            <p className="text-xs mt-1  dark:text-zinc-200 text-zinc-800 font-bold">{MyConstactInfo.contact.phoneNum}</p>
             </div>
 
             <div className="w-fit flex flex-col">
             <p className="text-sm font-bold mb-5 text-zinc-400 md:mb-2 sm:flex-col">Socail Media</p>
             <div className=" flex flex-col gap-3 items-start text-xs">
-            <i><a href={MyConstactInfo.SocailMedia.Instegram} >Instegram</a></i>
-            <i><a href={MyConstactInfo.SocailMedia.WhatsApp}>WhatsApp</a></i>
-            <i><a href={MyConstactInfo.SocailMedia.X}>X</a></i>
+            <i className=" dark:text-zinc-200 text-zinc-800 font-bold"><a href={MyConstactInfo.SocailMedia.Instegram} >Instegram</a></i>
+            <i className=" dark:text-zinc-200 text-zinc-800 font-bold"><a href={MyConstactInfo.SocailMedia.WhatsApp}>WhatsApp</a></i>
+            <i className=" dark:text-zinc-200 text-zinc-800 font-bold"><a href={MyConstactInfo.SocailMedia.X}>X</a></i>
             </div>
             </div>
             <div>
-            <p className="text-sm font-bold mb-5 text-zinc-400 md:mb-2 sm:flex-col">Location</p>
-            <p className="text-xs">{(MyConstactInfo._Location.L.toUpperCase())}</p>
+            <p className="text-sm font-bold mb-5 text-zinc-400 md:mb-2 sm:flex-col ">Location</p>
+            <p className="text-xs  dark:text-zinc-200 text-zinc-800 font-bold">{(MyConstactInfo._Location.L.toUpperCase())}</p>
             </div>
         </div>
             </div>
