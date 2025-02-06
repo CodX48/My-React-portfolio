@@ -61,8 +61,8 @@ function ReposList() {
                 </a>
                 <div className="max-sm:mt-3  p-1 w-[50%]">
                 <p className="w-full mb-2 lg:block sm:max-w-[60%] max-sm:max-w-[75%] sm:text-lg text-zinc-950 dark:dark:text-zinc-50">{Repos.description}</p>
-                {["HTML","CSS","JS"].map(ele =>{
-                  return(<span className="bg-violet-400/5 ring-1 ring-violet-600/80 py-1 px-2 rounded-md text-zinc-950 text-[13px] mr-3 dark:text-zinc-50">{ele}</span>
+                {[{id:1,title:"HTML"},{id:2,title:"CSS"},{id:3,title:"JS"}].map(ele =>{
+                  return(<span key={ele.id} className="bg-violet-400/5 ring-1 ring-violet-600/80 py-1 px-2 rounded-md text-zinc-950 text-[13px] mr-3 dark:text-zinc-50">{ele.title}</span>
                   )
                 })}
                 </div>
