@@ -39,7 +39,7 @@ function ReposList() {
     }
     return(
         <div className="flex flex-col justify-center items-center mt-20 lg:w-full ">
-        <ul className="flex relative flex-col justify-between items-center gap-5 w-[90%] bg-zinc-50 lg:px-20 py-20 ring-0 ring-pink-500/20 shadow-lg rounded-md md:px-10 sm:px-10 max-sm:px-10 min-h-[400px] overflow-hidden dark:bg-zinc-950 dark:ring-1">
+        <ul className="flex relative flex-col justify-between items-center gap-5 lg:w-[90%] sm:w-full max-sm:w-full bg-zinc-50 lg:px-20 py-20 ring-0 ring-pink-500/20 shadow-lg rounded-md md:px-10 sm:px-10 max-sm:px-10 min-h-[400px] overflow-hidden dark:bg-zinc-950 dark:ring-1">
         <div className="absolute -left-[30%] -top-5 -rotate-12  w-[900px] h-[300px] bg-pink-950/20 rounded-full blur-3xl dark:bg-sky-950"></div>
         <div className="z-20 absolute animate-myBounce duration-1000  -rotate-45 right-[15%] w-[130px] h-[150px] top-[10%] rounded-full blur-2xl dark:bg-sky-700/60" style={styleAnimation(7)}></div>
         <div className=" absolute animate-myBounce duration-1000 bg-pink-900/50 -rotate-45 right-[15%] w-[100px] h-[100px] top-[10%] rounded-full blur-3xl " style={styleAnimation(10)}></div>
