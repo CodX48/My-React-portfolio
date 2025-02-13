@@ -15,8 +15,8 @@ const MyexperienceList = [
   function MoreAboutMe(){
 
     return(
-        <div className="w-[100%] relative flex justify-center items-center overflow-hidden">
-          <div className="w-[300px] h-[300px] absolute left-52 bg-pink-900/50 rounded-full rotate-45 blur-3xl dark:bg-pink-900/50"></div>
+        <div className="w-[100%] relative flex justify-center items-center ">
+          <div className="w-[300px] h-[300px] absolute left-52 bg-pink-900/50 rounded-full rotate-45 blur-3xl dark:bg-pink-900/50 right-0 "></div>
          <ul className="p-20 lg:w-[90%]  z-10 sm:w-full max-sm:w-full">
             {MyexperienceList.map(ele=>{
                 return(
