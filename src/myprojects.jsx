@@ -31,8 +31,9 @@ function ReposList() {
     if(error){
         return ( <div className="w-full flex justify-center mt-20 text-5xl text-zinc-500"><p>Faild To Fetch Projects!!</p></div>);
     }
-
+    //server side
     const FilterdRepos = Repos.filter(R => R.description && R.description.includes(" front-end "));
+    //const FilterdReposServer = Repos.filter(R => R.description && R.description.includes(" backend "));
 
     function styleAnimation(time){
       return({animationDuration: `${time}s`})
@@ -61,10 +62,25 @@ function ReposList() {
                 </a>
                 <div className="max-sm:mt-3  p-1 w-[50%]">
                 <p className="w-full mb-2 lg:block sm:max-w-[60%] max-sm:max-w-[75%] sm:text-lg text-zinc-950 dark:dark:text-zinc-50">{Repos.description}</p>
-                {[{id:1,title:"HTML"},{id:2,title:"CSS"},{id:3,title:"JS"}].map(ele =>{
-                  return(<span key={ele.id} className="bg-violet-400/5 ring-1 ring-violet-600/80 py-1 px-2 rounded-md text-zinc-950 text-[13px] mr-3 dark:text-zinc-50">{ele.title}</span>
-                  )
-                })}
+                  {Repos.description.includes("server side") ? (
+                    [{ id: 1, title: "Node.js" }, { id: 2, title: "MongoDB" }, { id: 3, title: "Express" }].map((ele) => (
+                      <span
+                        key={ele.id}
+                        className="bg-green-400/5 ring-1 ring-green-600/80 py-1 px-2 rounded-md text-zinc-950 text-[13px] mr-3 dark:text-zinc-50"
+                      >
+                        {ele.title}
+                      </span>
+                    ))
+                  ) : Repos.description.includes("front-end") ? (
+                    [{ id: 4, title: "HTML" }, { id: 5, title: "CSS" }, { id: 6, title: "JS" }].map((ele) => (
+                      <span
+                        key={ele.id}
+                        className="bg-violet-400/5 ring-1 ring-violet-600/80 py-1 px-2 rounded-md text-zinc-950 text-[13px] mr-3 dark:text-zinc-50"
+                      >
+                        {ele.title}
+                      </span>
+                    ))
+                  ) : null}
                 </div>
                 </div>
             </li>
